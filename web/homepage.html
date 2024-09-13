@@ -1,138 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phenikaa Booking</title>
-</head>
-<body>
-  <nav>
-    <div class = "nav_bar">
-      <div class = "nav_header">
-        <div class = "nav_logo">
-          <span>HOTEL PHENIKAA</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="homepage.css" />
+    <title>Booking phenikaa/ phenikaa</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__bar">
+        <div class="nav__header">
+          <div class="logo nav__logo">
+            <span>HOTEL<br />PHENIKAA</span>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
         </div>
         <ul class="nav__links" id="nav-links">
-          <li><a href="#home">Trang chu</a></li>
-          <li><a href="#room">Phong</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#room">Room</a></li>
-          <li><a href="#restaurants">Restaurants</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#news">News</a></li>
         </ul>
       </div>
+    </nav>
 
-    </div>
-  </nav>
-
-
-  <header class = "header" id="home">
-    <div class = "section_container header_container">
-      <p class = "section_subheader">About Us</p>
-      <h1>The Perfect Place<br />For You</h1>
-      <button class = "btn">Booking Room</button>
-    </div>
-  </header>
-
-
-
-  <section class ="booking">
-    <div class = "section_container header_container">
-      <form action="/">
-        <div class ="input_guest">
-          <label for="check-in">CHECK-IN</label>
-          <input type="text" placeholder="Check In" />
-        </div>
-        <div class = "input_guest">
-          <label for  ="check-out">CHECK-OUT</label>
-          <input type = "text" placeholder = "Check Out"/>
-        </div>
-        <div class = "input_guest">
-          <label for ="guest">Guest</label>
-          <input type = "text" placeholder = " Number" />
-        </div>
-        <button class = "btn">Check Available</button>
-      </form>
-    </div>
-  </section>
-
-
-
-  <section class="about" id ="about">
-    <div class = "section_container header_container">
-        <div class="about_image">
-          <img src = "image/about.jpg" alt = "about"/>
-        </div>
-        <div class=" about_content">
-          <p class="section_subheader">About Us</p>
-          <h2 class = "section_header">Strong Team</h2>
-          <p class = "section_desciption">Unlocking Hospitality Excellence And Ensures Your Perfect Stay </p>
-        </div>
-      <div class="about_image">
-        <img src="image/about_2.webp" alt=""about/>
+    <header class="header" id="home">
+      <div class="section__container header__container">
+        <p class="section__subheader">ABOUT US</p>
+        <h1>The Place<br />For you</h1>
+        <button class="btn">Take A Room</button>
       </div>
-      <div class="about_image">
-        <img src="image/about_2.1.webp" alt=""about/>
+    </header>
+
+    <section class="booking">
+      <div class="section__container booking__container">
+        <form action="/">
+          <div class="input__group">
+            <label for="arrival">Arrival Date</label>
+            <input type="text" placeholder="Your Arrival Date" />
+          </div>
+          <div class="input__group">
+            <label for="departure">Departure Date</label>
+            <input type="text" placeholder="Your Departure Date" />
+          </div>
+          <div class="input__group">
+            <label for="guests">Guests</label>
+            <input type="text" placeholder="No Of Guests" />
+          </div>
+          <button class="btn">Check Availability</button>
+        </form>
       </div>
-      <div class="about_content">
-        <p class="section_subheader">Hanoi</p>
-        <h2 class="section_header">Acient and Modern</h2>
-        <p class="section_desciption">
-          Rich in history and tradition, the dynamic city of Hanoi is the capital of Vietnam and an important cultural centre with ancient and modern beauty. Set on the banks of the Red River, Hanoi features green parks, imposing temples, picturesque lakes, interesting shopping centres and stunning architecture. 
+    </section>
+
+  <section class="about" id="about">
+    <div class="section__container about__container">
+      <div class="about__grid">
+        <div class="about__image">
+          <img src="image/about.jpg" alt="about" />
+        </div>
+        <div class="about__card">
+
+          <h4>Strong Team</h4>
+          <p>
+            Unlocking Hospitality Excellence And Ensures Your Perfect Stay
+          </p>
+        </div>
+        <div class="about__image">
+          <img src="image/about_2.webp" alt="about" />
+        </div>
+        <div class="about__card">
+          <span><i class="ri-calendar-check-line"></i></span>
+          <h4>Hanoi</h4>
+          <p>Acient and Modern</p>
+        </div>
+      </div>
+      <div class="about__content">
+        <p class="section__subheader">ABOUT US</p>
+        <h2 class="section__header">Discover Our Underground</h2>
+        <p class="section__description">
+          Welcome to a hidden realm of extraordinary accommodations where
+          luxury, comfort, and adventure converge. Our underground hotels
+          offer an unparalleled escape from the ordinary, inviting you to
+          explore a subterranean world of wonders.
         </p>
         <button class="btn">Book Now</button>
       </div>
     </div>
   </section>
 
-
-
-  <section class="room" id="room">
-    <p class="section_subheader">Room</p>
-    <h2 class="section_header">Your Choice</h2>
-    <div class="room_grid">
-      <div class="room_card">
-        <img src="image/room-1.jpg" alt="room">
-        <div class="room_card_content">
-          <div>
-            <h4>Deluxe Suite</h4>
-            <p>Bask in luxury with breathtaking views from your private
-              suite.</p>
-          </div>
-          <h5>$299<span>/night</span></h5>
-          <button class="btn">Book Now</button>
-        </div>
+  <section class="about" id="service">
+    <div class="section__container service__container">
+      <div class="service__content">
+        <p class="section__subheader">SERVICES</p>
+        <h2 class="section__header">Strive Only For The Best.</h2>
+        <ul class="service__list">
+          <li>
+            <span><i class="ri-shield-star-line"></i></span>
+            High Class Security
+          </li>
+          <li>
+            <span><i class="ri-24-hours-line"></i></span>
+            24 Hours Room Service
+          </li>
+          <li>
+            <span><i class="ri-headphone-line"></i></span>
+            Conference Room
+          </li>
+          <li>
+            <span><i class="ri-map-2-line"></i></span>
+            Tourist Guide Support
+          </li>
+        </ul>
       </div>
-      <div class="room_card">
-        <img src="image/room-2.jpg" alt="room">
-        <div class="room_card_content">
-          <div>
-            <h4>Cityscape Suit</h4>
-            <p>Experience urban elegance and modern comfort in the heart of the
-              city.</p>
-          </div>
-          <h5>$399<span>/night</span></h5>
-          <button class="btn">Book Now</button>
-        </div>
-      </div>
-      <div class="room_card">
-        <img src="image/room-3.jpg" alt="room">
-        <div class="room_card_content">
-          <div>
-            <h4>Family SUite</h4>
-            <p>Consist of multiple rooms and a common living area.</p>
-          </div>
-          <h5>$499<span>/night</span></h5>
-          <button class="btn">Book Now</button>
-        </div>
-      </div>
-
-
     </div>
-
-
   </section>
 
 
-  
+
+  <!-- menu for restaurant -->
+
+  <section class="menu" id="menu">
+    <div class="section__container menu__container">
+      <div class="menu__header">
+        <div>
+          <p class="section__subheader">MENU</p>
+          <h2 class="section__header">Our Food Menu</h2>
+        </div>
+        <div class="section__nav">
+          <span><i class="ri-arrow-left-line"></i></span>
+          <span><i class="ri-arrow-right-line"></i></span>
+        </div>
+      </div>
+      <ul class="menu__items">
+        <li>
+          <img src="image/menu-1.jpg" alt="menu" />
+          <div class="menu__details">
+            <h4>Pho</h4>
+            <p>
+              Popular food in Vietnam.Vietnamese soup dish consisting of broth, rice noodles, herbs, and meat (usually beef (phở bò)), sometimes chicken (phở gà).
+            </p>
+          </div>
+        </li>
+        <li>
+          <img src="image/menu-2.jpg" alt="menu" />
+          <div class="menu__details">
+            <h4>Banh Mi</h4>
+            <p>
+              A short baguette with thin, crisp crust and a soft, airy texture. It is often split lengthwise and filled with meat and savory ingredients
+            </p>
+          </div>
+        </li>
+        <li>
+          <img src="image/menu-3.jpg" alt="menu" />
+          <div class="menu__details">
+            <h4>Bun cha</h4>
+            <p>
+              Over a plate of white rice noodles, grilled fatty pork with a side dish of dipping sauce. 
+            </p>
+          </div>
+        </li>
+        <li>
+          <img src="image/menu-4.jpg" alt="menu" />
+          <div class="menu__details">
+            <h4>Cha Ca</h4>
+            <p>
+              Catfish marinated with in tumeric,shrimp sauce, ginger and then grilled over charcoal, serve with hot pan.
+              
+            </p>
+          </div>
+        </li>
+      </ul>
+      <div class="menu__images">
+        <img src="image/menu-5.jpg" alt="menu" />
+        <img src="image/menu-6.jpg" alt="menu" />
+        <img src="image/menu-7.png" alt="menu" />
+      </div>
+      <ul class="menu__banner">
+        <li>
+          <span><i class="ri-file-text-line"></i></span>
+          <h4>8k</h4>
+          <p>Projects are Completed</p>
+        </li>
+        <li>
+          <span><i class="ri-user-line"></i></span>
+          <h4>500K</h4>
+          <p>Active Around Hanoi</p>
+        </li>
+        <li>
+          <span><i class="ri-function-line"></i></span>
+          <h4>02k</h4>
+          <p>Categories Served</p>
+        </li>
+        <li>
+          <span><i class="ri-lightbulb-flash-line"></i></span>
+          <h4>100M</h4>
+          <p>Ideas Raised Funds</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section__container news__container" id="news">
+    <div class="news__header">
+      <div>
+        <p class="section__subheader">BLOG</p>
+        <h2 class="section__header">News Feeds</h2>
+      </div>
+      <div class="section__nav">
+        <span><i class="ri-arrow-left-line"></i></span>
+        <span><i class="ri-arrow-right-line"></i></span>
+      </div>
+    </div>
+    <div class="news__grid">
+      <div class="news__card">
+        <img src="image/news-1.webp" alt="news" />
+        <div class="news__card__title">
+          <p>25th March 2022</p>
+          <p>By Thomas</p>
+        </div>
+        <h4>Exploring Local Culinary Gems: A Foodie's Guide.</h4>
+        <p>
+          Join Thomas as he takes you on a gastronomic adventure through the
+          neighborhood surrounding our hotel.
+        </p>
+      </div>
+      <div class="news__card">
+        <img src="image/news-2.jpg" alt="news" />
+        <div class="news__card__title">
+          <p>15th June 2022</p>
+          <p>By Mr.s Minh Le</p>
+        </div>
+        <h4>Balancing Mind, Body, and Soul at Our Hotel.</h4>
+        <p>
+          Discover holistic spa treatments, fitness facilities, and
+          mindfulness practices that will leave you feeling refreshed.
+        </p>
+      </div>
+      <div class="news__card">
+        <img src="image/news-3.jpeg" alt="news" />
+        <div class="news__card__title">
+          <p>08th August 2022</p>
+          <p>By Mr Hung Anh</p>
+        </div>
+        <h4>Professional Team</h4>
+        <p>
+          I love the people in this hotel, they so hospitality, love that way!
+        </p>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
