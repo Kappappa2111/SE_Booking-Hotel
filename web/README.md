@@ -22,12 +22,12 @@ To become the leading tour operator in Vietnam, offering authentic and affordabl
 #### Hướng Dẫn Cài Đặt
 
 1. Clone repository:
-git clone https://github.com/Kappappa2111/SE_Booking-Hotel.git
-
-  cd web
+git clone 
+- https://github.com/Kappappa2111/SE_Booking-Hotel.git
+- cd web
 
 2.  Cài đặt các gói cần thiết 
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 3. Chạy ứng dụng
-uvicorn main:app
+- uvicorn main:app
