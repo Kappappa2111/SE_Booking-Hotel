@@ -18,3 +18,16 @@ To become the leading tour operator in Vietnam, offering authentic and affordabl
 - Local Partnerships: Work with local partners to offer unique experiences.
 - Market Expansion: Develop the brand nationwide and internationally.
 
+
+#### Hướng Dẫn Cài Đặt
+
+1. Clone repository:
+git clone 
+- https://github.com/Kappappa2111/SE_Booking-Hotel.git
+- cd web
+
+2.  Cài đặt các gói cần thiết 
+- pip install -r requirements.txt
+
+3. Chạy ứng dụng
+- uvicorn main:app
