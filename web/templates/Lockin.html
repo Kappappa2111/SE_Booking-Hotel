@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Login</title>
+    <link rel="stylesheet" href="Lockin.css">
+    <link href="homepage.html" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to Travel</h2>
+        <form id="loginForm">
+            <select id="language-dropdown">
+                <option value="en">English</option>
+                <option value="jp">日本語</option>
+                <option value="zh">中文</option>
+                <option value="vi">Tiếng Việt</option>
+            </select>
+            <input type="text" placeholder="Username or 10-digit Phone Number" id="username" required>
+            <input type="password" placeholder="Password" id="password" required>
+            <button type="submit">Login</button>
+            <p>or login with</p>
+            <div class="social-login">
+                <button type="button" class="google-btn">Login with Google</button>
+                <button type="button" class="facebook-btn">Login with Facebook</button>
+            </div>
+            <p>Don't have an account? <a href="#">Create an account</a></p>
+        </form>
+    </div>
+
+    <div class="slideshow">
+        <img src="image/PTV9.webp" class="slide" alt="Travel Image 1">
+        <img src="image/PTV8.jpg" class="slide" alt="Travel Image 2">
+        <img src="image/PTV11.jpg" class="slide" alt="Travel Image 3">
+        <img src="image/PTV4.jpg" class="slide" alt="Travel Image 4">
+    </div>
+    <script src="Lockin.js"></script>
+</body>
+</html>
