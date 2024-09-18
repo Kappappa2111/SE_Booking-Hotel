@@ -18,6 +18,8 @@ To become the leading tour operator in Vietnam, offering authentic and affordabl
 - Local Partnerships: Work with local partners to offer unique experiences.
 - Market Expansion: Develop the brand nationwide and internationally.
 
+User Story link: https://docs.google.com/document/d/1SyiO_iOK-LuptPe7PMBPhYEP8p_SYp3k38w3rpOaOH0/edit?usp=sharing
+
 
 #### Hướng Dẫn Cài Đặt
 
