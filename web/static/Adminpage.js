@@ -11,24 +11,15 @@ function showSlides() {
     slideIndex = (slideIndex + 1) % totalSlides;
 }
 setInterval(showSlides, 5000);
-
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault(); 
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    const role = document.getElementById("choose-your-role").value;
 
     if (username && password) {
-        if (role === "Admin") {
-            window.location.href = "Adminpage.html";  
-        } else if (role === "Tourist") {
-            window.location.href = "homepage.html"; 
-        } else {
-            alert("Please select a valid role.");
-        }
+        window.location.href = "homepage.html"; 
     } else {
         alert("Please enter valid login details.");
     }
 });
-
 showSlides();
