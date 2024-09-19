@@ -16,19 +16,21 @@ app.add_middleware(
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/", response_class=HTMLResponse)
-async def read_searchroom():
-    with open("templates/login.html") as file:
-        content = file.read()
-    return HTMLResponse(content=content)
+async def read_login():
+    with open("templates/Login.html") as file:
+        return HTMLResponse(content=file.read())
 
-@app.get("/", response_class=HTMLResponse)
+@app.get("/admin", response_class=HTMLResponse)
+async def read_admin_page():
+    with open("templates/Adminpage.html") as file:
+        return HTMLResponse(content=file.read())
+
+@app.get("/home", response_class=HTMLResponse)
 async def read_homepage():
     with open("templates/homepage.html") as file:
-        content = file.read()
-    return HTMLResponse(content=content)
+        return HTMLResponse(content=file.read())
 
 @app.get("/searchroom", response_class=HTMLResponse)
 async def read_searchroom():
     with open("templates/searchroom.html") as file:
-        content = file.read()
-    return HTMLResponse(content=content)
+        return HTMLResponse(content=file.read())

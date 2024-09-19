@@ -20,9 +20,9 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     if (username && password) {
         if (role === "Admin") {
-            window.location.href = "Adminpage.html";  
+            window.location.href = "/admin";  
         } else if (role === "Tourist") {
-            window.location.href = "homepage.html"; 
+            window.location.href = "/home"; 
         } else {
             alert("Please select a valid role.");
         }

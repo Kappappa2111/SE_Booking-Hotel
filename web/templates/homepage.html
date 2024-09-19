@@ -1,59 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="static/homepage.css" />
-    <title>Booking phenikaa/ phenikaa</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/homepage.css">
+    <title>Booking Phenikaa</title>
+</head>
+<body>
     <nav>
-      <div class="nav__bar">
-        <div class="nav__header">
-          <div class="logo nav__logo">
-            <span>HOTEL<br />PHENIKAA</span>
-          </div>
-          <div class="nav__menu__btn" id="menu-btn">
-            <i class="ri-menu-line"></i>
-          </div>
+        <div class="nav__bar">
+            <div class="nav__header">
+                <div class="logo nav__logo">
+                    <span>HOTEL<br>PHENIKAA</span>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#room">Room</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#news">News</a></li>
+            </ul>
         </div>
-        <ul class="nav__links" id="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#room">Room</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#news">News</a></li>
-        </ul>
-      </div>
     </nav>
 
     <header class="header" id="home">
         <div class="section__container header__container">
-          <p class="section__subheader">ABOUT US</p>
-          <h1>The Place<br />For you</h1>
-          <button class="btn">Take A Room</button>
+            <p class="section__subheader">ABOUT US</p>
+            <h1>The Place<br>For you</h1>
+            <button class="btn">Take A Room</button>
         </div>
-      </header>
-      
+    </header>
 
     <section class="booking">
         <div class="section__container booking__container">
             <form id="bookingForm">
                 <div class="input__group">
                     <label for="arrival">Arrival Date</label>
-                    <input type="date" id="arrival" placeholder="Your Arrival Date" />
+                    <input type="date" id="arrival" placeholder="Your Arrival Date">
                 </div>
                 <div class="input__group">
                     <label for="departure">Departure Date</label>
-                    <input type="date" id="departure" placeholder="Your Departure Date" />
+                    <input type="date" id="departure" placeholder="Your Departure Date">
                 </div>
                 <div class="input__group">
                     <label for="guests">Guests</label>
-                    <input type="number" id="guests" placeholder="No Of Guests" />
+                    <input type="number" id="guests" placeholder="No Of Guests">
                 </div>
                 <button type="button" class="btn" id="checkAvailabilityBtn">Check Availability</button>
             </form>
@@ -62,24 +58,20 @@
 
     <script>
         document.getElementById('checkAvailabilityBtn').addEventListener('click', function() {
-            // Get form data
             const arrivalDate = document.getElementById('arrival').value;
             const departureDate = document.getElementById('departure').value;
             const guests = document.getElementById('guests').value;
 
-            // Validate form data
             if (!arrivalDate || !departureDate || !guests) {
                 alert('Please fill out all fields.');
                 return;
             }
 
-            // Store data in localStorage
             localStorage.setItem('arrivalDate', arrivalDate);
             localStorage.setItem('departureDate', departureDate);
             localStorage.setItem('guests', guests);
 
-            // Redirect to searchroom.html
-            window.location.href = 'searchroom.html';
+            window.location.href = '/searchroom';
         });
     </script>
 
