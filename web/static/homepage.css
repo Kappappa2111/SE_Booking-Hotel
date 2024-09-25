@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
 
 :root {
@@ -483,6 +484,10 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+
+
+
 }
 
 .news__card__title p {
@@ -518,6 +523,7 @@ nav {
 
 .footer__logo div {
   background-color: var(--secondary-color);
+
 }
 
 .footer__socials {
@@ -597,6 +603,7 @@ nav {
   font-size: 0.8rem;
   color: var(--text-light);
   text-align: center;
+
 }
 
 @media (width > 480px) {
