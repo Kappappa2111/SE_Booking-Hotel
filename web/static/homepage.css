@@ -21,6 +21,7 @@
 .section__container {
   max-width: var(--max-width);
   padding: 5rem 1rem;
+  margin: auto;
 }
 
 .section__subheader {

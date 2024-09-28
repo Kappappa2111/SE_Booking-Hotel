@@ -28,7 +28,7 @@ h2 {
     font-size: 24px;
     margin-bottom: 30px;
     font-weight: 600;
-    color: #007bff;
+    color: #14467a;
 }
 
 input[type="text"], input[type="password"], select {
@@ -44,7 +44,7 @@ input[type="text"], input[type="password"], select {
 button {
     width: 100%;
     padding: 12px;
-    background-color: #007bff;
+    background-color: #0c3c6e;
     color: white;
     border: none;
     border-radius: 8px;
@@ -56,7 +56,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #10447b;
 }
 
 .social-login {
@@ -92,7 +92,7 @@ p {
 }
 
 a {
-    color: #007bff;
+    color: #134171;
     text-decoration: none;
     font-weight: 600;
 }
