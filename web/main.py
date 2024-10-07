@@ -32,5 +32,5 @@ async def read_homepage():
 
 @app.get("/searchroom", response_class=HTMLResponse)
 async def read_searchroom():
-    with open("templates/searchroom.html") as file:
+    with open("templates/search_room.html") as file:
         return HTMLResponse(content=file.read())
