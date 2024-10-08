@@ -66,7 +66,3 @@ const completedTasksChart = new Chart(ctx3, {
         }
     }
 });
-document.getElementById('signupForm').addEventListener('submit', function(event) {
-    event.preventDefault();  
-    window.location.href = "sign_up.html";  
-});

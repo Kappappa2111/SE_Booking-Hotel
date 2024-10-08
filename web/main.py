@@ -39,7 +39,7 @@ async def register_user(
 
 @app.get("/admin", response_class=HTMLResponse)
 async def read_admin_page():
-    with open("templates/Adminpage.html") as file:
+    with open("templates/dashboard.html") as file:
         return HTMLResponse(content=file.read())
 
 @app.get("/home", response_class=HTMLResponse)
