@@ -1,7 +1,8 @@
-from fastapi import FastAPI, Form
-from fastapi.responses import HTMLResponse
+from fastapi import FastAPI, Form, Request
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+from database import *
 
 app = FastAPI()
 
@@ -21,9 +22,20 @@ async def read_login():
         return HTMLResponse(content=file.read())
 
 @app.get("/register", response_class=HTMLResponse)
-async def read_register():
+async def get_register_page():
     with open("templates/sign_up.html") as file:
         return HTMLResponse(content=file.read())
+
+@app.post("/register")
+async def register_user(
+    username: str = Form(...),
+    email: str = Form(...),
+    password: str = Form(...),
+):
+    result = insert_new_person(username, email, password)
+    if result:
+        return RedirectResponse(url="/", status_code=303)
+    return {"success": False, "message": "Registration failed."}
 
 @app.get("/admin", response_class=HTMLResponse)
 async def read_admin_page():
@@ -39,10 +51,12 @@ async def read_homepage():
 async def read_searchroom():
     with open("templates/search_room.html") as file:
         return HTMLResponse(content=file.read())
+
 @app.get("/room1", response_class=HTMLResponse)
 async def read_room1():
     with open("templates/room_1.html") as file:
         return HTMLResponse(content=file.read())
+    
 @app.get("/room2", response_class=HTMLResponse)
 async def read_room2():
     with open("templates/room_2.html") as file:

@@ -11,19 +11,13 @@
         <h2>Sign Up</h2>
         <form id="signUpForm" method="POST" action="/register">
             <input type="text" name="username" placeholder="Username" id="username" required>
-            <input type="text" name="phone" placeholder="10-digit Phone Number" id="phone" required>
             <input type="email" name="email" placeholder="Email Address" id="email" required>
             <input type="password" name="password" placeholder="Password" id="password" required>
             <input type="password" name="confirm_password" placeholder="Confirm Password" id="confirmPassword" required>
-            <select name="role" required>
-                <option value="">Select your role</option>
-                <option value="Tourist">Tourist</option>
-                <option value="Admin">Admin</option>
-            </select>
             <button type="submit">Sign Up</button>
             <p>or sign up with</p>
             <div class="social-login">
-                <button type="button" class="login-btn">Login Here</button>
+                <button type="button" class="login-btn" id="loginBtn">Login Here</button>
             </div>
         </form>        
     </div>

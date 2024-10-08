@@ -11,6 +11,7 @@ function showSlides() {
     slideIndex = (slideIndex + 1) % totalSlides;
 }
 
+showSlides(); 
 setInterval(showSlides, 5000);
 
 document.getElementById("signUpForm").addEventListener("submit", function(event) {
@@ -21,45 +22,49 @@ document.getElementById("signUpForm").addEventListener("submit", function(event)
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
 
-    // Kiểm tra xem các trường có đủ không
     if (!username || !email || !password || !confirmPassword) {
         alert("Please fill out all fields.");
         return;
     }
 
-    // Kiểm tra định dạng email
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
         alert("Please enter a valid email address.");
         return;
     }
 
-    // Kiểm tra xem mật khẩu và xác nhận có khớp không
+    const passwordMinLength = 8;
+    if (password.length < passwordMinLength) {
+        alert(`Password must be at least ${passwordMinLength} characters long.`);
+        return;
+    }
+
     if (password !== confirmPassword) {
         alert("Passwords do not match.");
         return;
     }
 
-    const userData = {
-        username: username,
-        email: email,
-        password: password
-    };
+    const formData = new FormData();
+    formData.append("username", username);
+    formData.append("email", email);
+    formData.append("password", password);
 
     fetch('/register', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(userData)
+        body: formData
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
     .then(data => {
         if (data.success) {
             alert('Registration successful!');
-            window.location.href = '/login';
+            window.location.href = '/';
         } else {
-            alert(data.message || 'Registration failed.');
+            alert('Registration failed. Please try again.');
         }
     })
     .catch(error => {
@@ -67,6 +72,3 @@ document.getElementById("signUpForm").addEventListener("submit", function(event)
         alert('An error occurred. Please try again later.');
     });
 });
-
-// Gọi hàm để hiển thị slideshow ngay từ đầu
-showSlides();
