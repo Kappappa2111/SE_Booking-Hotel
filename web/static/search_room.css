@@ -1,6 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: "Poppins", sans-serif;
+    background-color: #121530;
+    color: #f4f4f9;
     margin: 0;
     padding: 0;
 }
@@ -15,37 +16,48 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #3c4262;
 }
 
 .hotel-header h1 {
-    font-size: 24px;
-    color: #333;
+    font-size: 28px;
+    color: #f4f4f9;
 }
 
 .hotel-header button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+    padding: 10px 25px;
+    background-color: #0b3a6d; 
+    color: #f0dd0b;
     border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hotel-header button:hover {
+    background-color: #0d4f92;
 }
 
 .room-section {
     display: flex;
     justify-content: space-between;
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
+    background-color: #1c2239;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 12px;
 }
 
 .room-details {
-    max-width: 60%;
+    max-width: 55%;
 }
 
 .room-details img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
+    border: 2px solid #3c4262;
 }
 
 .room-info {
@@ -54,17 +66,24 @@ body {
 
 .room-info h2 {
     margin-top: 0;
-    font-size: 20px;
+    font-size: 22px;
+    color: #f4f4f9;
+}
+
+.room-info p {
+    color: #b0b0b8;
 }
 
 .price-details {
     text-align: right;
     font-size: 18px;
+    color: #f4f4f9;
 }
 
 .total-price {
-    font-size: 24px;
-    color: #4CAF50;
+    font-size: 26px;
+    font-weight: bold;
+    color: #f0dd0b;
 }
 
 .continue-button {
@@ -73,10 +92,17 @@ body {
 }
 
 .continue-button button {
-    padding: 15px 30px;
-    background-color: #00aaff;
-    color: white;
+    padding: 15px 35px;
+    background-color: #0b3a6d;
+    color: #f4f4f9;
     font-size: 18px;
+    border-radius: 12px;
     border: none;
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.continue-button button:hover {
+    background-color: #0d4f92;
 }

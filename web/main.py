@@ -39,3 +39,26 @@ async def read_homepage():
 async def read_searchroom():
     with open("templates/search_room.html") as file:
         return HTMLResponse(content=file.read())
+@app.get("/room1", response_class=HTMLResponse)
+async def read_room1():
+    with open("templates/room_1.html") as file:
+        return HTMLResponse(content=file.read())
+@app.get("/room2", response_class=HTMLResponse)
+async def read_room2():
+    with open("templates/room_2.html") as file:
+        return HTMLResponse(content=file.read())
+
+@app.get("/room3", response_class=HTMLResponse)
+async def read_room3():
+    with open("templates/room_3.html") as file:
+        return HTMLResponse(content=file.read())
+
+@app.get("/room4", response_class=HTMLResponse)
+async def read_room4():
+    with open("templates/room_4.html") as file:
+        return HTMLResponse(content=file.read())
+
+@app.get("/room5", response_class=HTMLResponse)
+async def read_room5():
+    with open("templates/room_5.html") as file:
+        return HTMLResponse(content=file.read())
