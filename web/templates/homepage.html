@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="/static/homepage.css">
     <title>Booking Phenikaa</title>
 </head>
@@ -40,11 +41,11 @@
             <form id="bookingForm">
                 <div class="input__group">
                     <label for="arrival">Arrival Date</label>
-                    <input type="date" id="arrival" placeholder="Your Arrival Date">
+                    <input type="text" id="arrival" placeholder="Your Arrival Date" class="date-input">
                 </div>
                 <div class="input__group">
                     <label for="departure">Departure Date</label>
-                    <input type="date" id="departure" placeholder="Your Departure Date">
+                    <input type="text" id="departure" placeholder="Your Departure Date" class="date-input">
                 </div>
                 <div class="input__group">
                     <label for="guests">Guests</label>
@@ -55,7 +56,16 @@
         </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
+        flatpickr("#arrival", {
+            dateFormat: "Y-m-d",
+        });
+
+        flatpickr("#departure", {
+            dateFormat: "Y-m-d",
+        });
+
         document.getElementById('checkAvailabilityBtn').addEventListener('click', function() {
             const arrivalDate = document.getElementById('arrival').value;
             const departureDate = document.getElementById('departure').value;
@@ -71,8 +81,6 @@
             localStorage.setItem('guests', guests);
 
             window.location.href = '/searchroom';
-
-
         });
     </script>
 

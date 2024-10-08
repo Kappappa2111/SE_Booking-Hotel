@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Form
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
@@ -18,6 +18,11 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 @app.get("/", response_class=HTMLResponse)
 async def read_login():
     with open("templates/Login.html") as file:
+        return HTMLResponse(content=file.read())
+
+@app.get("/register", response_class=HTMLResponse)
+async def read_register():
+    with open("templates/sign_up.html") as file:
         return HTMLResponse(content=file.read())
 
 @app.get("/admin", response_class=HTMLResponse)

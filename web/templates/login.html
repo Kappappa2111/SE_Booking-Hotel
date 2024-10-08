@@ -4,18 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Login</title>
-    <link rel="stylesheet" href="/static/Login.css">
+    <link rel="stylesheet" href="/static/login.css">
 </head>
 <body>
     <div class="login-container">
-        <h2>Login </h2>
+        <h2>Login</h2>
         <form id="loginForm">
-            <select id="language-dropdown">
-                <option value="en">English</option>
-                <option value="jp">日本語</option>
-                <option value="zh">中文</option>
-                <option value="vi">Tiếng Việt</option>
-            </select>
             <select id="choose-your-role">
                 <option value="Tourist">You are the user</option>
                 <option value="Admin">You are an administrator</option>
@@ -28,7 +22,7 @@
                 <button type="button" class="google-btn">Login with Google</button>
                 <button type="button" class="facebook-btn">Login with Facebook</button>
             </div>
-            <p>Don't have an account? <a href="#">Create an account</a></p>
+            <button type="button" id="createAccountBtn">Create an account</button>
         </form>
     </div>
     <div class="slideshow">
@@ -39,5 +33,10 @@
         <img src="/static/image/PTV4.jpg" class="slide" alt="Travel Image 5">
     </div>
     <script src="/static/login.js"></script>
+    <script>
+        document.getElementById("createAccountBtn").addEventListener("click", function() {
+            window.location.href = "/register";
+        });
+    </script>
 </body>
 </html>
